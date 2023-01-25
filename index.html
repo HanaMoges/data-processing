@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-     <title>Form Template</title>
+     <title>Data proccessing</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/main-form.css">
+  <link rel="stylesheet" href="css/data-processing.css">
  </head>
  <body>
      <header>
-     <h1 class="page-header">Form Template</h1>
+     <h1 class="page-header">Date proccessing</h1>
         <nav class="topnav" id="myTopnav">
             <a href="index.html" class="active">Home</a>
             <a href="#">Link</a>
@@ -18,67 +18,99 @@
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
         </nav>
      </header>
-     
+
    <main class="wrapper">
- 
-    <h2 class="subheader">Place form code below:</h2>
-    <form method="get" action="" class="main-from">
+    
+      <div id="output">
+       <form method="get" action="" class="main-form">
+      <h2 class="subheader">cart</h2>
+      <div id="widgets">
+        <div> 
+<b>Widget</b><br />
+            <p>Our Widgets are spring loaded and need no batteries!</p>
+            <p>At $3.99 they're a bargain!</p>
+
+            <p><label><input type="checkbox" name="Cart" value="Widget" /> Add to Cart</label></p>
+            <div class="pic"><img src="images/widget.png" /></div>
+        </div>
+        <div>
+            <b>Sprocket</b><br />
+            <p>Our Sprockets are well made and hold up to extreme pressure!</p>
+            <p>They only cost $5.99!</p>
+
+            <p><label><input type="checkbox" name="Cart" value="Sprocket" /> Add to Cart</label></p>
+            <div class="pic"><img src="images/sprocket.png" /></div>
+        </div>
+        <div>
+            <b>Thingy</b><br />
+            <p>Our Thingys have many uses, and people come up with new ones 
+              all the time!</p>
+            <p>Such a deal at $1.99!</p>
+            <p><label><input type="checkbox" name="Cart" value="thingy" /> Add to Cart</label></p>
+            <div class="pic"><img src="images/thingy.png" /></div>
+        </div>
+    </div>
+    <h2 class="subheader">Shipping Info:</h2>
+  
+
       <div>
         <label for="FirstName">First Name</label><br>
-        <input type="text" name="FirstName" id="FirstName" placeholder="First Name" required autofocus> 
+        <input type="text" name="FirstName" id="FirstName" placeholder="First Name" required autofocus>
       </div>
       <div>
-        <lable for="LastName">Last Name</lable><br>
-        <input type="text" name="LastName" id="LastName" placeholder="Last Name" required> 
+        <label for="LastName">Last Name</label><br>
+        <input type="text" name="LastName" id="LastName" placeholder="Last Name" required>
       </div>
       <div>
         <label for="Email">Email</label><br>
-        <input type="email" name="Email" id="Email" placeholder="Email" required> 
+        <input type="email" name="Email" id="Email" placeholder="Email" required>
       </div>
       <div>
-        <lable for="Address">Address</lable><br>
-        <input type="text" name="Addresss" id="Address" placeholder="Address" required> 
+        <div>
+          <label for="Phone">Phone</label><br>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="xxx-xxx-xxxx" required>
+        </div>
+        <div>
+          <label for="
+<input type="address" name="Address" id="Address" placeholder="Address" required>
+        </div>
+        <div>
+          <label for="City">City</label><br>
+          <input type="text" name="City" id="City" placeholder="City" required>
+        </div>
+
+        <div>
+          <label for="State">State</label><br>
+          <select name="State" id="State" required>
+            <option value="">Please select state</option>
+            <option value="Ak">Alaska</option>
+            <option value="WA">Washington</option>
+            <option value="CA">California</option>
+            <option value="OR">Oregon</option>
+
+          </select>
+
+        </div>
+        <div>
+          <label for="postalcode">Postal code</label><br>
+          <input type="text" name="postal_code" id="postal code " placeholder="postal code" required>
+        </div>
+        <div>
+          <label><name="Note">Note</label><br>
+          <textarea name="Note" id="Note" placeholder="Note" ></textarea>
+        </div>
+        <input type="submit" value="submit it!">
       </div>
-      <div>
-        <lable for="State">State</lable><br>
-        <select name="State" id="State" required>
-          <option value="">Please select state</option>
-          <option value="AK">Alaska</option>
-          <option value="CA">California</option>
-          <option value="OR">Oregon</option>
-          <option value="WA">Washington</option>
-        </select>
-      </div>
-      <div>
-        <fieldset>
-          <legend>Would you like to join our mailing list?</legend>
-          <label><input type="radio" name="joingMailingList" value= "Yes" required >Yes</label><br>
-          <label><input type="radio" name="joingMailingList" value= "No" > No</label>
-        </fieldset>
-      </div>
-      <div>
-        <fieldset>
-          <legend>interested In?</legend>
-          <label><input type="checkbox" name="InterestedIn" value= "Website"  >Website</label><br>
-          <label><input type="checkbox" name="InterestedIn" value= "OnlineCalendar" > Online Calendar</label><br>
-          <label><input type="checkbox" name="InterestedIn" value= "Contact" > Contact Form</label><br>
-          <label><input type="checkbox" name="InterestedIn" value= "Comlimentry Lollipops">Lollipops</label><br>
-        </fieldset>
-      </div>
-    <div>
-      <label for="Comments">Comments</label><br>
-      <textarea name=Comments" id="Comments" placeholder="Comments" cols="36"rows="4"></textarea>
-    </div>
-      <input type="submit" value="submit it!">
     </form>
     <footer>
-      <p><small>&copy; 2021-<span id="this-year"></span> by
-          Hana Moges, All Rights Reserved ~ 
+      <p><small>&copy; 2021-<span id="this-year"></span> by 
+          Hana moges, All Rights Reserved ~ 
           <a id="html-checker" href="#" target="_blank">Check HTML</a> ~ 
           <a id="css-checker" href="#" target="_blank">Check CSS</a></small>
      </p>
     </footer>
   </main>
-  <script src="js/main.js"></script>   
+  <script src="js/main.js"></script> 
+  <script src="js/data-processing.js"></script>
  </body>
 </html>
