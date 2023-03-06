@@ -52,8 +52,8 @@ urlParams.forEach(function(value, key) {
   }
 
 });
-myCart += "Total: " + myTotal + '<br>';
-myCart += "<div>"+ myCart + "</div>";
+myTotal = "Total: " + myTotal + '<br>';
+myCart = "<p style='margin-left:2%'>"+ myCart + myTotal + "</p>";
 myData = myCart + myData;
 
 myData += '<p><a href="index.html">CLEAR</a></p>';
