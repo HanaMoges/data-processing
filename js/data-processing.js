@@ -23,24 +23,24 @@ urlParams.forEach(function(value, key) {
 
     switch(value){
       case "Widget":
-          myData += "Widget: $3.99<br>";
+          myCart += "Widget: $3.99<br>";
           myTotal += 3.99;
       break;
 
       case "Sprocket":
-          myData += "Sprocket: $5.99<br>";
+          myCart += "Sprocket: $5.99<br>";
           myTotal += 5.99;
       break;
 
       case "Thingy":
-          myData += "Thingy: $1.99<br>";
+          myCart += "Thingy: $1.99<br>";
           myTotal += 1.99;
       break;
 
     }
-    myData += "Total: " + myTotal + '<br>';
-    myData += "<div>"+ myData + "</div>"; 
-    
+    myCart += "Total: " + myTotal + '<br>';
+     
+
   }else{//shipping label
     key = key.split("_").join(" ");
 
@@ -48,11 +48,12 @@ urlParams.forEach(function(value, key) {
         value = titleCase(value);
     }
     myData += `<p>${key}: ${value}</p>`;
+
   }
 
 });
 
-
+myCart += "<div>"+ myCart + "</div>";
 myData = myCart + myData;
 
 myData += '<p><a href="index.html">CLEAR</a></p>';
