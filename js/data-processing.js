@@ -38,7 +38,7 @@ urlParams.forEach(function(value, key) {
       break;
 
     }
-    myCart += "Total: " + myTotal + '<br>';
+    
      
 
   }else{//shipping label
@@ -52,7 +52,7 @@ urlParams.forEach(function(value, key) {
   }
 
 });
-
+myCart += "Total: " + myTotal + '<br>';
 myCart += "<div>"+ myCart + "</div>";
 myData = myCart + myData;
 
