@@ -19,7 +19,7 @@ myCart += "<h3>Cart Contents</h3>";
 urlParams.forEach(function(value, key) {
  
   if(key == "Cart"){//process cart
-    alert("Cart Item: " + value);
+    //alert("Cart Item: " + value);
 
     switch(value){
       case "Widget":
@@ -38,7 +38,9 @@ urlParams.forEach(function(value, key) {
       break;
 
     }
-
+    myData += "Total: " + myTotal + '<br>';
+    myData += "<div>"+ myData + "</div>"; 
+    
   }else{//shipping label
     key = key.split("_").join(" ");
 
@@ -49,7 +51,7 @@ urlParams.forEach(function(value, key) {
   }
 
 });
-myData += "Total: " + myTotal + '<br>';
+
 
 myData = myCart + myData;
 
